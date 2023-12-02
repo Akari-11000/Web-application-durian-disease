@@ -1,0 +1,13 @@
+train: D:\Work\Main_IS_Project\train\images
+val: D:\Work\Main_IS_Project\valid\images
+test: D:\Work\Main_IS_Project\test\images
+
+nc: 4
+names: ['Algal Leaf Spot', 'Leaf Blight', 'Leaf Spot', 'No Disease']
+
+roboflow:
+  workspace: akrnautilus-x2m0v
+  project: is-project-ypxbr
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/akrnautilus-x2m0v/is-project-ypxbr/dataset/2
