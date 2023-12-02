@@ -15,4 +15,8 @@ Web application durian disease
       : Create web app use HTML,CSS,JavaScript 
       : Deploy wed app with Firebase
 
+Data set :
+
+            Roboflow [ https://app.roboflow.com/ds/16FNCSRxVT?key=aOu1kACRqS ]
+
 「 This web application is my research for computer vision and AI 」
