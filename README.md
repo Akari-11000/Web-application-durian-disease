@@ -20,3 +20,9 @@ Data set :
             Roboflow [ https://app.roboflow.com/ds/16FNCSRxVT?key=aOu1kACRqS ]
 
 「 This web application is my research for computer vision and AI 」
+
+
+------------------------------------------------------------------------------
+|                  Special Thanks : 「  Aaron Kanha  」                       |
+------------------------------------------------------------------------------
+
