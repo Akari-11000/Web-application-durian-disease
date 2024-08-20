@@ -20,14 +20,6 @@ var infer = function() {
 		};
 
 		$.ajax(settings).then(function(response) {
-			if(settings.format == "json") {
-				var pretty = $('<pre>');
-				var formatted = JSON.stringify(response, null, 4)
-
-				pretty.html(formatted);
-				$('#output').html("").append(pretty);
-				$('html').scrollTop(100000);
-			} else {
 				var arrayBufferView = new Uint8Array(response);
 				var blob = new Blob([arrayBufferView], {
 					'type': 'image\/jpeg'
@@ -39,8 +31,14 @@ var infer = function() {
 					$('html').scrollTop(100000);
 				};
 				img.attr('src', base64image);
-				$('#output').html("").append(img);
-			}
+				$('#output').html("").append(img,
+					"<p>---------------------------------คลิกที่ชื่อโรคเพื่อดูข้อมูลโรค----------------------------------</p>",
+					"<p>Click on the disease name to view disease information.</p>",
+					"<p><a href='http://www.pmc07.doae.go.th/home/index.php/2023/09/25/259/'>Leaf Blight: ใบไหม้</a></p>",
+					"<p><a href='https://esc.doae.go.th/wp-content/uploads/2019/08/warn178.pdf'>Algal Leaf Spot: โรคใบจุดสาหร่าย</a></p>",
+					"<p><a href='http://www.pmc07.doae.go.th/home/index.php/2020/07/12/1263/'>Leaf Spot: โรคใบจุด</a></p>",
+					"<p><a href='https://esc.doae.go.th/wp-content/uploads/2021/06/Durian.pdf'>No Disease: ไม่มีโรค</a></p>"
+				);
 		});
 	});
 };
@@ -143,8 +141,8 @@ var getSettingsFromForm = function(cb) {
 	settings.format = format;
 
 	if(format == "image") {
-		var labels = $('#labels .active').attr('data-value');
-		if(labels) parts.push("&labels=on");
+		
+		labels = parts.push("&labels=on");
 
 		var stroke = $('#stroke .active').attr('data-value');
 		if(stroke) parts.push("&stroke=" + stroke);
@@ -199,8 +197,8 @@ var resizeImage = function(base64Str) {
 		img.src = base64Str;
 		img.onload = function(){
 			var canvas = document.createElement("canvas");
-			var MAX_WIDTH = 1500;
-			var MAX_HEIGHT = 1500;
+			var MAX_WIDTH = 500;
+			var MAX_HEIGHT = 500;
 			var width = img.width;
 			var height = img.height;
 			if (width > height) {

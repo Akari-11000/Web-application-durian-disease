@@ -18,23 +18,23 @@
 			<div class="header__grid">
 				<img class="header__logo" src="./SMTE.png" alt="SMTE_SW.RY">
 				<div>
-					<label class="header__label" for="model">โมเดล</label>
+					<label class="header__label" for="model">Model</label>
 					<input class="input" type="text" id="model" value="is-project-ypxbr"/>
 				</div>
 				<div>
-					<label class="header__label" for="version">เวอร์ชัน</label>
+					<label class="header__label" for="version">Version</label>
 					<input class="input" type="number" id="version" value="2"/>
 				</div>
 				<div>
-					<label class="header__label" for="api_key">API คีย์</label>
+					<label class="header__label" for="api_key">API Key</label>
 					<input class="input" type="text" id="api_key" value="iOyx7nxK4AT9Y6hA5GCK"/>
 				</div>
 				<div>
 					<div class="Language" id="THENG">
-						<label class="THENG">เลือกภาษา</label>
+						<label class="THENG">Select Language</label>
 							<div>
-								<button type="button" id="TH" class="bttn left fill active" onclick="location.href='./index.html'">ไทย</button>
-								<button type="button" id="ENG" class="bttn right fill" onclick="location.href='./ENG.html'">อังกฤษ</button>
+								<button type="button" id="TH" class="bttn left fill" onclick="location.href='./index.html'">TH</button>
+								<button type="button" id="ENG" class="bttn right fill active" onclick="location.href='./ENG.html'">ENG</button>
 							</div>
 					</div>
 				</div>
@@ -44,45 +44,47 @@
 		<div class="content">
 			<div class="content__grid">
 				<div class="col-12-s6-m4" id="method">
-					<label class="input__label">เลือกวิธีอัปโหลด</label>
+					<label class="input__label">Upload Method</label>
 					<div>
-						<button data-value="upload" id="uploadButton" class="bttn left fill active">รูปภาพ</button>
+						<button data-value="upload" id="uploadButton" class="bttn left fill active">Upload</button>
 						<button data-value="url" id="urlButton" class="bttn right fill">URL</button>
 					</div>
 				</div>
 
 				<div class="col-12-m8" id="fileSelectionContainer">
-					<label class="input__label" for="file">เลือกไฟล์</label>
+					<label class="input__label" for="file">Select File</label>
 					<div class="flex">
-						<input class="input input--left flex-1" type="text" id="fileName" disabled />
-						<button id="fileMock" class="bttn right active">เรียกดู</button>
+						<input class="input input--left flex-1" type="text" id="fileName" disabled />							
+						<button id="fileMock" class="bttn right active">Browse</button>
 					</div>
 					<input style="display: none;" type="file" id="file" />
 				</div>
 
 				<div class="col-12-m8" id="urlContainer">
-					<label class="input__label" for="file">เลือกURL</label>
+					<label class="input__label" for="file">Enter Image URL</label>
 					<div class="flex">
 						<input type="text" id="url" placeholder="https://path.to/your.jpg" class="input"/><br>
 					</div>
 				</div>
-
+        
+		
 				<div class="col-6-m3 relative">
-					<label class="input__label" for="confidence">ความแม่นยำต่ำสุด</label>
+					<label class="input__label" for="confidence">Min Confidence</label>
 					<div>
 						<i class="fas fa-crown"></i>
 						<span class="icon">%</span>
 						<input type="number" id="confidence" value="50" max="100" accuracy="2" min="0" class="input input__icon"/></div>
 					</div>
 				<div class="col-6-m3 relative">
-					<label class="input__label" for="overlap">ความทับซ้อนสูงสุด</label>
+					<label class="input__label" for="overlap">Max Overlap</label>
 					<div>
 						<i class="fas fa-object-ungroup"></i>
 						<span class="icon">%</span>
 						<input type="number" id="overlap" value="50" max="100" accuracy="2" min="0" class="input input__icon"/></div>
 				</div>
+
 					<div class="col-12-s6-m4" id="stroke">
-						<label class="input__label">ความหนาเส้นขอบ</label> 	
+						<label class="input__label">Stroke Width</label> 	
 						<div>
 							<button data-value="1" class="bttn left">1px</button>
 							<button data-value="2" class="bttn active">2px</button>
@@ -90,22 +92,22 @@
 							<button data-value="10" class="bttn right">10px</button>
 						</div>
 					</div>
-					<div class="col-6-m3" id="format">
-					<label class="input__label" style="display:none;">รูปแบบข้อมูล</label>
+				<div class="col-6-m3" id="format">
+					<label class="input__label" style="display:none;">Inference Result</label>
 					<div>
-						<button id="imageButton" data-value="image" class="bttn left fill active" style="display:none;">รูปภาพ</button>
-						<button id="jsonButton" data-value="json" class="bttn right fill" style="display:none;">JSON</button>
+						<button id="imageButton" data-value="image" class="bttn left fill active" style="display:none;">Image</button>
+						<button id="jsonButton" data-value="json" class="bttn right fill" style="display:none;" style="display:none;">JSON</button>
 					</div>
 				</div>
 				</div>
 				<div class="col-12">
-					<button type="submit" value="Run Inference" class="bttn__primary">「 เริ่มการประมวลผล 」</button>
+					<button type="submit" value="Run Inference" class="bttn__primary">「 Start Processing 」</button>
 				</div>
 			</div>
 			<div class="result" id="resultContainer">
 				<div class="divider"></div>
 				<div class="result__header">
-					<h3 class="headline">ผลข้อมูล</h3>
+					<h3 class="headline">Result</h3>
 				</div>
 				<pre id="output" class="codeblock"/></pre>
 			</div>
