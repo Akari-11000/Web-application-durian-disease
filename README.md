@@ -39,7 +39,7 @@ Web application
 
 -------------------------------------------------------------------------------
 
-# 「 This web application is my research for computer vision and AI 」
+「 This web application is my research for computer vision and AI 」
 
 -------------------------------------------------------------------------------
 |                  Special Thanks : 「  Aaron Kanha  」                       |
