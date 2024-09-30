@@ -17,7 +17,7 @@ Web application
  
 -------------------------------------------------------------------------------
 
-# durian disease Web application 
+# Durian Disease Web Application 
   It is a web app for durian diseases :
     
     Contains disease :
